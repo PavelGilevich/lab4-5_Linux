@@ -28,6 +28,27 @@ static char arg2_input[WRITE_SIZE];
 static char operation_input[WRITE_SIZE];
 
 #ifdef SYSFS
+// description args
+//kernel obj attribute
+static struct attribute arg1 = {
+  .name = ARG1,
+  .mode = 0666,
+};
+//kernel obj attribute
+static struct attribute arg2 = {
+  .name = ARG2,
+  .mode = 0666,
+};
+//kernel obj attribute
+static struct attribute operation = {
+  .name = OPERATION,
+  .mode = 0666,
+};
+//kernel obj attribute
+static struct attribute result = {
+  .name = RESULT,
+  .mode = 0666,
+};
 #else
 
 struct proc_dir_entry *calc_dir;
